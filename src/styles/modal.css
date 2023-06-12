@@ -1,0 +1,225 @@
+.modal__controller {
+    height: 26.25rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    margin-top: 3.75rem;
+    padding: 0;
+
+    background-color: var(--fixed-white);
+
+    border-radius: var(--radius-1);
+    border: none;
+
+    box-shadow: var(--shadow);
+
+    animation-name: slideIn;
+    animation-duration: var(--animation-duration, 0.2s);
+    animation-timing-function: var(--animation-type);
+    animation-fill-mode: forwards; /* Manterá o estado final da animação */
+}
+
+@keyframes slideIn {
+    from {
+        top: -100%; /* Inicia acima do topo */
+    }
+    to {
+        top: 32%; /* Termina no meio da tela */
+    }
+}
+
+.modal__controller::backdrop {
+    background-color: var(--background-backdrop-color);
+}
+
+.modal-form__container {
+    padding: 1.5rem;
+    color: var(--color-grey-1);
+    font-size: var(--font-size-3);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+
+
+.modal-title__controller {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.875rem;
+}
+
+.title-close__modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-close__modal>h4 {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+
+}
+
+.modal-close__button {
+    width: 2.1875rem;
+    height: 1.875rem;
+
+    background-color: var(--color-grey-5);
+
+    border-radius: var(--radius-2);
+}
+
+.modal-title__controller>p {
+    font-weight: var(--font-weight-3);
+
+    line-height: var(--font-line-height-1);
+
+    color: var(--color-grey-2);
+}
+
+.modal-inputs-buttons__conatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+
+}
+
+.modal-input__controller {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.625rem;
+}
+
+.modal-value-input__container {
+    width: 100%;
+    height: 2rem;
+
+    border: 0.0625rem solid black;
+    border-radius: var(--radius-1);
+
+    padding: 1.25rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.625rem;
+}
+
+.modal-value-input__container.active {
+    border-color: var(--color-brand-1);
+}
+
+.modal-value__type {
+    font-weight: var(--font-weight-2);
+}
+
+.modal-value__input {
+    width: 100%;
+    font-weight: var(--font-weight-3);
+}
+
+
+.modal-type__controller {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+}
+
+.modal-type__controller>h5 {
+    font-weight: var(--font-weight-2);
+}
+
+.modal-type-buttons__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.modal-buttons__type {
+    width: 100%;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: var(--font-weight-1);
+
+    border-radius: var(--radius-1);
+    border: 0.0938rem solid var(--color-grey-5);
+}
+
+.modal-input__button:checked+label {
+    color: var(--color-brand-1);
+    border-color: var(--color-brand-1);
+    background-color: var(--color-brand-3);
+}
+
+.modal-register-buttons__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-final__buttons {
+    width: 8.7188rem;
+    height: 2rem;
+    padding-inline: 0.875rem;
+
+    font-weight: var(--font-weight-1);
+
+    border-radius: var(--radius-1);
+}
+
+.modal-cancel__button {
+    background-color: var(--color-grey-4);
+}
+
+.modal-insert__button {
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+}
+
+@media (min-width: 700px) {
+    .modal__controller {
+        max-width: 26.75rem;
+        height: 21.875rem;
+    }
+
+    .modal-register-buttons__container {
+        justify-content: flex-end;
+        gap: 0.625rem;
+    }
+
+    .modal-type__controller {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .modal-type-buttons__container {
+        flex-direction: row;
+    }
+
+    .modal-buttons__type {
+        width: 5.0625rem;
+        height: 2rem;
+    }
+
+    @keyframes slideIn {
+        from {
+            top: -100%; /* Inicia acima do topo */
+        }
+        to {
+            top: 50%; /* Termina no meio da tela */
+        }
+    }
+
+}
