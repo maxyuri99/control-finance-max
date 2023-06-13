@@ -1,109 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control Finance</title>
-    <link
-      rel="shortcut icon"
-      href="./src/assets/favicon.ico"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="Control Finance - Seu controle financeiro"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
-    <link rel="stylesheet" href="./src/styles/modal.css">
-    <link rel="stylesheet" href="./src/styles/buttons.css">
-    <link rel="stylesheet" href="./src/styles/index.css" />
-  </head>
-  <body>
-    <header>
-      <section class="container header__container">
-        <h1><span>Control</span> Finance</h1>
-        <button class="register__button">Registrar novo valor</button>
-      </section>      
-    </header>
-    <main id="app" class="container">
-      <section class="filter__controller">
-        <h2>Resumo financeiro</h2>
-        <section class="buttons-filter__container">
-          <input checked hidden type="radio" id="todos" class="input-filter__button" name="resumeTypeID">
-          <label for="todos" class="buttons__filter">Todos</label>
-          <input hidden type="radio" id="entradas" class="input-filter__button" name="resumeTypeID">
-          <label for="entradas" class="buttons__filter">Entrada</label>
-          <input hidden type="radio" id="saidas" class="input-filter__button" name="resumeTypeID">
-          <label for="saidas" class="buttons__filter">Saída</label>
-        </section>
-      </section>
-      <section class="sum-value__controller">
-        <h3>Soma dos valores</h3>
-        <p>R$ <span class="sum__value">2.120,00</span></p>
-      </section>
-      <section class="list-value__container">
-        <section class="list-null__container">
-          <h4>Nenhum valor cadastrado</h4>
-          <p>Registrar novo valor</p>
-        </section>
-        <ul class="main-list-value__controller">
-          <li class="list__value">
-            <p>R$ <span class="sum__value">40,00</span></p>
-            <div class="type-delete__container">
-              <p>Entrada</p>
-              <i class="fas fa-trash trash-icon"></i>
-            </div>            
-          </li>
-          <li class="list__value">
-            <p>R$ <span class="sum__value">39,00</span></p>
-            <div class="type-delete__container">
-              <p>Entrada</p>
-              <i class="fas fa-trash trash-icon"></i>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
 
-    <dialog class="container modal__controller">
-      <form class="modal-form__container">
-        <section class="modal-title__controller">
-          <div class="title-close__modal">
-            <h4>Registro de valor</h4>
-            <button class="modal-close__button">X</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Finance</title>
+  <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Control Finance - Seu controle financeiro" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+  <link rel="stylesheet" href="./src/styles/modal.css">
+  <link rel="stylesheet" href="./src/styles/buttons.css">
+  <link rel="stylesheet" href="./src/styles/index.css" />
+</head>
+
+<body>
+  <header>
+    <section class="container header__container">
+      <h1><span>Control</span> Finance</h1>
+      <div class="header-button__container">
+        <button class="register__button">Registrar novo valor</button>
+      </div>
+    </section>
+  </header>
+  <main id="app" class="container">
+    <section class="filter__controller">
+      <h2>Resumo financeiro</h2>
+      <section class="buttons-filter__container">
+        <input checked hidden type="radio" id="all" class="input-filter__button all-button__filter" name="resumeTypeID">
+        <label for="all" class="buttons__filter">Todos</label>
+        <input hidden type="radio" id="0" class="input-filter__button" name="resumeTypeID">
+        <label for="0" class="buttons__filter">Entrada</label>
+        <input hidden type="radio" id="1" class="input-filter__button" name="resumeTypeID">
+        <label for="1" class="buttons__filter">Saída</label>
+      </section>
+    </section>
+    <section class="sum-value__controller">
+      <h3>Soma dos valores</h3>
+      <p>R$ <span class="sum__value">2.120,00</span></p>
+    </section>
+    <section class="list-value__container">
+      <section class="list-null__container">
+        <h4>Nenhum valor cadastrado</h4>
+        <p>Registrar novo valor</p>
+      </section>
+      <ul class="main-list-value__controller">
+        <li class="list__value">
+          <p>R$ <span class="value__item">40,00</span></p>
+          <div class="type-delete__container">
+            <p>Entrada</p>
+            <i class="fas fa-trash trash-icon"></i>
           </div>
-          <p>Digite o valor e em seguida aperte o botão referente ao tipo do valor</p>
-        </section>
-        <section class="modal-inputs-buttons__conatiner">
-          <div class="modal-input__controller">
-            <h5>Valor</h5>
-            <div class="teste modal-value-input__container">
-              <span class="modal-value__type">R$</span>
-              <input class="teste modal-value__input" type="number" placeholder="00,00">
-            </div>
+        </li>
+        <li class="list__value">
+          <p>R$ <span class="value__item">39,00</span></p>
+          <div class="type-delete__container">
+            <p>Entrada</p>
+            <i class="fas fa-trash trash-icon"></i>
           </div>
-          <div class="modal-type__controller">
-            <h5>Tipo de valor</h5>
-            <div class="modal-type-buttons__container">
-              <input checked hidden type="radio" id="entrada" class="modal-input__button" name="categoryID" value="0">
-              <label for="entrada" class="modal-buttons__type">Entrada</label>
-              <input hidden type="radio" id="saida" class="modal-input__button" name="categoryID" value="1">
-              <label for="saida" class="modal-buttons__type">Saída</label>
-            </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <dialog class="container modal__controller">
+    <form class="modal-form__container">
+      <section class="modal-title__controller">
+        <div class="title-close__modal">
+          <h4>Registro de valor</h4>
+          <button class="modal-close__button">X</button>
+        </div>
+        <p>Digite o valor e em seguida aperte o botão referente ao tipo do valor</p>
+      </section>
+      <section class="modal-inputs-buttons__conatiner">
+        <div class="modal-input__controller">
+          <h5>Valor</h5>
+          <div class="modal-value-input__container">
+            <span class="modal-value__type">R$</span>
+            <input class="modal-value__input" type="number" placeholder="00.00" required>
           </div>
-          <div class="modal-register-buttons__container">
-            <button class="modal-final__buttons modal-cancel__button">Cancelar</button>
-            <button class="modal-final__buttons modal-insert__button">Inserir Valor</button>
+        </div>
+        <div class="modal-type__controller">
+          <h5>Tipo de valor</h5>
+          <div class="modal-type-buttons__container">
+            <input checked hidden type="radio" id="entrada" data-client-id="0"
+              class="modal-input__button input-btn__modal" name="categoryID">
+            <label for="entrada" class="modal-buttons__type">Entrada</label>
+            <input hidden type="radio" id="saida" data-client-id="1" class="modal-input__button" name="categoryID">
+            <label for="saida" class="modal-buttons__type">Saída</label>
           </div>
-        </section>
-      </form>
-    </dialog>
-    
-    <!-- <script  src="./src/scripts/modal.js"></script>
-    <script src="./src/scripts/valuesData.js"></script> -->
-    <script type="module" src="./src/scripts/index.js"></script>
-  </body>
+        </div>
+        <div class="modal-register-buttons__container">
+          <button class="modal-final__buttons modal-cancel__button">Cancelar</button>
+          <button class="modal-final__buttons modal-insert__button" type="s">Inserir Valor</button>
+        </div>
+      </section>
+    </form>
+  </dialog>
+
+  <script type="module" src="./src/scripts/index.js"></script>
+</body>
+
 </html>

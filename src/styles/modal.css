@@ -1,9 +1,10 @@
 .modal__controller {
+    max-width: 21.75rem;
     height: 26.25rem;
 
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 100%;
 
@@ -20,15 +21,19 @@
     animation-name: slideIn;
     animation-duration: var(--animation-duration, 0.2s);
     animation-timing-function: var(--animation-type);
-    animation-fill-mode: forwards; /* Manterá o estado final da animação */
+    animation-fill-mode: forwards;
+    /* Manterá o estado final da animação */
 }
 
 @keyframes slideIn {
     from {
-        top: -100%; /* Inicia acima do topo */
+        top: -100%;
+        /* Inicia acima do topo */
     }
+
     to {
-        top: 32%; /* Termina no meio da tela */
+        top: 32%;
+        /* Termina no meio da tela */
     }
 }
 
@@ -44,10 +49,6 @@
     flex-direction: column;
     gap: 1rem;
 }
-
-
-
-
 
 .modal-title__controller {
     display: flex;
@@ -75,6 +76,11 @@
     background-color: var(--color-grey-5);
 
     border-radius: var(--radius-2);
+}
+
+.modal-close__button:hover {
+    cursor: pointer;
+    background-color: var(--color-grey-4);
 }
 
 .modal-title__controller>p {
@@ -114,6 +120,11 @@
     gap: 0.625rem;
 }
 
+/* .modal-value-input__container.active {
+    border-color: var(--color-brand-1);
+} */
+
+.modal-value-input__container:focus-within,
 .modal-value-input__container.active {
     border-color: var(--color-brand-1);
 }
@@ -158,6 +169,10 @@
     border: 0.0938rem solid var(--color-grey-5);
 }
 
+.modal-buttons__type:hover {
+    cursor: pointer;
+}
+
 .modal-input__button:checked+label {
     color: var(--color-brand-1);
     border-color: var(--color-brand-1);
@@ -183,15 +198,24 @@
     background-color: var(--color-grey-4);
 }
 
+.modal-cancel__button:hover {
+    background-color: var(--color-grey-3);
+    cursor: pointer;
+}
+
 .modal-insert__button {
     background-color: var(--color-brand-1);
     color: var(--fixed-white);
 }
 
+.modal-insert__button:hover {
+    background-color: var(--color-brand-2);
+    cursor: pointer;
+}
+
 @media (min-width: 700px) {
     .modal__controller {
-        max-width: 26.75rem;
-        height: 21.875rem;
+        height: 22.25rem;
     }
 
     .modal-register-buttons__container {
@@ -215,10 +239,15 @@
 
     @keyframes slideIn {
         from {
-            top: -100%; /* Inicia acima do topo */
+            left: 20%;
+            top: -100%;
+            /* Inicia acima do topo */
         }
+
         to {
-            top: 50%; /* Termina no meio da tela */
+            top: 40%;
+            /* Termina no meio da tela */
+            left: 20%;
         }
     }
 
