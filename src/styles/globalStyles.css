@@ -86,7 +86,7 @@ header {
 .header-button__container {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 @media (min-width: 700px) {
@@ -102,6 +102,9 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 0;
+  }
+  .header-button__container {
+    justify-content: flex-end;
   }
 
 }

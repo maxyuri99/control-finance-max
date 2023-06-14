@@ -56,11 +56,16 @@ export const handleDeleteValue = (arrayValue) => {
     trash.addEventListener('click', (event) => {
       const clientId = Number(event.target.dataset.clientId)
 
-      const indexId = arrayValue.findIndex(client => {
+      const indexIdFilter = arrayValue.findIndex(client => {
         return client.id === clientId
       })
 
-      arrayValue.splice(indexId, 1)
+      const indexId = insertedValues.findIndex(client => {
+        return client.id === clientId
+      })
+
+      insertedValues.splice(indexId, 1)
+      arrayValue.splice(indexIdFilter, 1)
 
       render(arrayValue)
     })
@@ -82,7 +87,6 @@ const verifyKeypres = () => {
       event.preventDefault()
     }
   })
-
 }
 
 handleFilter(insertedValues)
